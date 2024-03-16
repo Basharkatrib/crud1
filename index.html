@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="header">
+            <h2>crud</h2>
+            <p>product management system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <div class="all">
+                <input type="number" onkeyup="getTotal()"  id="price" placeholder="price">
+                <input type="number" onkeyup="getTotal()" id="taxes" placeholder="taxes">
+                <input type="number" onkeyup="getTotal()" id="ads" placeholder="ads">
+                <input type="number" onkeyup="getTotal()" id="discount" placeholder="discount">
+                <small   id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button type="submit" id="submit">create</button>
+            <div id="deleteAll" style="margin-top: 5px;"></div>
+        </div>
+        <div class="outputs">
+            <input type="search" onkeyup="searchall(this.value)" name="" id="search" placeholder="search">
+            <div class="by">
+                <input type="submit" onclick="getsearchby(this.id)" id="bytitle" value="search by title">
+                <input type="submit" onclick="getsearchby(this.id)" id="bycategory" value="search by category">
+            </div>
+            
+            <div class="container">
+                                                                                    
+                <div class="table-responsive">          
+                <table class="table">
+                  <thead>
+                         <tr>
+                                  <th>id</th>
+                                  <th>title</th>
+                                  <th>price</th>
+                                  <th>texas</th>
+                                  <th>ads</th>
+                                  <th>discount</th>
+                                  <th>total</th>
+                                  <th>count</th>
+                                  <th>catrgory</th>
+                                  <th>update</th>
+                                  <th>delete</th>
+                              </tr>
+                              
+                  </thead>
+                 <tbody id="tbody">
+                   
+                            
+              
+                </tbody>
+                </table>
+                </div>
+              </div>
+            
+        </div>
+        
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
